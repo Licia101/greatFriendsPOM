@@ -2,11 +2,10 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
-public class UKBAReasonPage {
+public class UKBAConfirmationPage {
     WebDriver driver;
-    By study = By.id("response-2");
+    By confirmationMessage = By.xpath("//h2[contains(text(),'You’ll need a visa to study in the UK')]");
 
 
 
@@ -16,13 +15,12 @@ public class UKBAReasonPage {
 
 
 
-    public UKBAReasonPage(WebDriver driver){
+    public UKBAConfirmationPage(WebDriver driver){
         this.driver = driver;
 
     }
 
-    public void clickOnStudy(){
-
-        driver.findElement(study).click();
+    public String getConfirmation(){
+        return driver.findElement(confirmationMessage).getText();
     }
 }
