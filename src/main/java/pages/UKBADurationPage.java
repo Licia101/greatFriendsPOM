@@ -2,11 +2,10 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
-public class UKBAReasonPage {
+public class UKBADurationPage {
     WebDriver driver;
-    By study = By.id("response-2");
+    By duration = By.id("response-1");
 
 
 
@@ -16,13 +15,13 @@ public class UKBAReasonPage {
 
 
 
-    public UKBAReasonPage(WebDriver driver){
+    public UKBADurationPage(WebDriver driver){
         this.driver = driver;
 
     }
 
-    public void clickOnStudy(){
+    public void clickOnLongerThan6Months(){
 
-        driver.findElement(study).click();
+        driver.findElement(duration).click();
     }
 }
